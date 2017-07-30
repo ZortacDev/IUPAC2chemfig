@@ -1,3 +1,5 @@
+This plugin allows you to convert IUPAC names for chemical compounds to LaTeX chemfig structures.
+
 # Prerequisites
 
 This plugin has some requirements/dependencies:
