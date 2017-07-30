@@ -12,9 +12,9 @@ try:
     smiles =  commands.getoutput('echo "' + iupacname + '" > /tmp/name.txt; java -jar ~/javalibs/opsin.jar /tmp/name.txt /tmp/out.txt >/dev/null 2>&1; cat /tmp/out.txt')
     if smiles != "":
         if mode == "normal":
-            chemfig = commands.getoutput('mol2chemfig -zof -i direct "' + smiles + '"')
+            chemfig = commands.getoutput('mol2chemfig -of -i direct "' + smiles + '"')
         elif mode == "carbon":
-            chemfig = commands.getoutput('mol2chemfig -czof -i direct "' + smiles + '"')
+            chemfig = commands.getoutput('mol2chemfig -cof -i direct "' + smiles + '"')
         else:
             chemfig = iupacname
         normal('cc'+line.replace(iupacname, chemfig))
