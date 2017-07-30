@@ -17,7 +17,7 @@ try:
             chemfig = commands.getoutput('mol2chemfig -cof -i direct "' + smiles + '"')
         else:
             chemfig = iupacname
-        normal('cc'+line.replace(iupacname, chemfig))
+        normal('cc'+line.replace(iupacname, chemfig)+'\n')
     else:
         normal('cc'+line)
 except AttributeError:
