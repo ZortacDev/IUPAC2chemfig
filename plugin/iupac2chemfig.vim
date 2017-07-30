@@ -2,7 +2,7 @@ if !has('python')
     finish
 endif
 
-let s:path = resolve(expand('<sfile>:p')) . '/iupac2chemfig.py'
+let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':r') . '.py'
 
 function! IUPAC2chemfig()
     python mode = "normal"
