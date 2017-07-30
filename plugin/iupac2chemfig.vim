@@ -2,14 +2,16 @@ if !has('python')
     finish
 endif
 
+let s:path = resolve(expand('<sfile>:p'))
+
 function! IUPAC2chemfig()
     python mode = "normal"
-    pyfile iupac2chemfig.py
+    pyfile s:path . IUPACiupac2chemfig.py
 endfunc
 
 function! IUPAC2carbon()
     python mode = "carbon"
-    pyfile iupac2chemfig.py
+    pyfile s:path . IUPACiupac2chemfig.py
 endfunc
 
 command! IUPAC2CARB call IUPAC2carbon()
